@@ -13,4 +13,10 @@
 
 Route::get('/', function () {
     return view('welcome');
+    
 });
+route::get('/karyawan','karyawancontroller@index');
+route::post('/karyawan/create','karyawancontroller@create');
+route::get('/karyawan/{id}/edit','karyawanController@edit');
+route::post('/karyawan/{id}/update','karyawanController@update');
+route::get('/karyawan/{id}/delete','karyawanController@delete');
