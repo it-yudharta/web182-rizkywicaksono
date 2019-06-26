@@ -20,3 +20,7 @@ route::post('/karyawan/create','karyawancontroller@create');
 route::get('/karyawan/{id}/edit','karyawanController@edit');
 route::post('/karyawan/{id}/update','karyawanController@update');
 route::get('/karyawan/{id}/delete','karyawanController@delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
