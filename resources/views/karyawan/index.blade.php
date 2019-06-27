@@ -7,7 +7,7 @@
       </div>
       @endif
           <div class="row">
-          <div class="col-6">
+          <div class="col-4">
           <h1>Data karyawan</h1>
           </div>
           
@@ -25,7 +25,8 @@
                     <th>Nama karyawan</th>
                     <th>Nik</th>
                     <th>Alamat</th>
-                    <th>Departemen</th>        
+                    <th>Departemen</th> 
+                        
                 </tr>
                 @foreach($data_karyawan as $karyawan)
                 <tr>
@@ -50,7 +51,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Nambah jeneng karyawan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -69,13 +70,15 @@
                   <input name="Nik" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nik">
               </div>
 
+
+             
               <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Alamat</label>
-                  <textarea name="Alamat" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <label for="exampleInputEmail1">Alamat</label>
+                  <input name="Alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Alamat">
               </div>
 
               <div class="form-group">
-                  <label for="exampleFormControlSelect1">Pilih Departemen SHE</label>
+                  <label for="exampleFormControlSelect1">Pilih Departemen</label>
                   <select name="Departemen" class="form-control" id="exampleFormControlSelect1">
                   <option value='produksi'>Produksi</option>
                   <option value='maintenance'>maintenance</option>
@@ -84,15 +87,8 @@
                 </select>
                 </div>
 
-<div class="form-group">
-    <label for="exampleInputEmail1">Agama</label>
-    <input name="agama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Agama" value="{{$karyawan->agama}}">
-</div>
 
-<div class="form-group">
-    <label for="exampleFormControlTextarea1">Alamat</label>
-    <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3">{{$karyawan->alamat}}</textarea>
-</div>
+
 
 </div>
 

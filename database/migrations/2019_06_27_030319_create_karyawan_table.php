@@ -15,6 +15,10 @@ class CreateKaryawanTable extends Migration
     {
         Schema::create('karyawan', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama_karyawan');
+            $table->string('Nik');
+            $table->string('Alamat');
+            $table->string('Departemen');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateKaryawanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('karyawan');
+        Schema::dropIfExists('table');
     }
 }

@@ -8,7 +8,7 @@
             </div>
             @endif
                 <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                 
                         <form action="/karyawan/{{$karyawan->id}}/update" method="POST">
                     {{csrf_field()}}  
@@ -23,8 +23,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Alamat</label>
-                        <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3">{{$karyawan->alamat}}</textarea>
+                        <label for="exampleInputEmail1">Alamat</label>
+                        <input name="Alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="alamat" value="{{$karyawan->Alamat}}">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Pilih Departemen</label>
@@ -34,6 +34,7 @@
                         <option value= 'warehouse'@if($karyawan->Departemen == 'warehouse') selected @endif>warehouse</option>
                          <option value= 'SHE'@if($karyawan->Departemen == 'SHE') selected @endif>SHE</option>
                         </select>
+                        </div>
                         </div>
                     
                         <button type="submit" class="btn btn-warning">Update</button>
